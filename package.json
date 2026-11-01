@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-tokyo-night-storm",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Tokyo Night Storm inspired theme for Slidev (dark only)",
   "packageManager": "pnpm@10.34.6",
   "type": "module",
