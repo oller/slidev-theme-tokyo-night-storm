@@ -1,11 +1,10 @@
 ---
 theme: ./
-layout: center
+layout: cover
 class: text-center
 ---
-# Nord Theme 
 
-A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://sli.dev/)
+# Tokyo Night Storm
 
 ---
 
@@ -79,31 +78,6 @@ class: "text-center"
 lorem ipsum dolor sit _amet_
 
 ---
-
-# Components 
-<br>
-
-### NordBadge
-
-<br>
-<div class="flex items-center gap-4">
-  <NordBadge variant="primary">Primary</NordBadge>
-  <NordBadge variant="success">Success</NordBadge>
-  <NordBadge variant="warning">Beta</NordBadge>
-  <NordBadge variant="danger">Deprecated</NordBadge>
-</div>
-
-<br />
-
-```html
-<!-- Example usage in a slide -->
-<NordBadge variant="primary">New</NordBadge>
-```
-
-
-
-
----
 layout: section
 ---
 
@@ -129,9 +103,9 @@ layout: statement
 layout: quote
 ---
 
-# "Polar night, snow storm, frost and aurora."
+# "Neon rain on the streets of Shinjuku."
 
-Arctic Ice Studio
+Tokyo Night Storm
 
 ---
 layout: two-cols
@@ -139,24 +113,24 @@ layout: two-cols
 
 # Left
 
-- Frost
-- Snow
+- Storm
+- Neon
 
 ::right::
 
 # Right
 
-- Aurora
-- Polar night
+- Rain
+- Midnight
 
 ---
 layout: image-right
-image: https://images.unsplash.com/photo-1488415032361-b7e238421f1b?auto=format&fit=crop&w=1920&q=80
+image: https://images.unsplash.com/photo-1604315523775-74cee3df116c?q=80&w=1920&auto=format&fit=crop
 ---
 
 # Images
 
-Slidev's `image-right` and `image-left` layouts work out of the box.
+Slidev's `image-right` and `image-left` layouts work out of the box, filling the full slide height.
 
-- Aurora over snow-covered mountains is a natural fit for Nord's arctic palette
-- Photo from Unsplash
+- Neon-soaked city streets are a natural fit for Tokyo Night's palette
+- Photo on [Unsplash](https://images.unsplash.com/photo-1604315523775-74cee3df116c?q=80&w=3850&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D)

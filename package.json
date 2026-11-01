@@ -1,15 +1,26 @@
 {
   "name": "slidev-theme-tokyo-night-storm",
   "version": "0.0.0",
+  "description": "A Tokyo Night Storm inspired theme for Slidev (dark only)",
   "packageManager": "pnpm@10.34.6",
   "type": "module",
   "keywords": [
     "slidev-theme",
-    "slidev"
+    "slidev",
+    "tokyo-night",
+    "tokyo-night-storm",
+    "theme",
+    "presentation",
+    "slides",
+    "dark-theme"
   ],
   "author": {
     "name": "David Ollerhead",
     "url": "https://davidollerhead.com"
+  },
+  "homepage": "https://github.com/oller/slidev-theme-tokyo-night-storm#readme",
+  "bugs": {
+    "url": "https://github.com/oller/slidev-theme-tokyo-night-storm/issues"
   },
   "repository": {
     "type": "git",
@@ -29,9 +40,7 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "pnpm run screenshot:dark && pnpm run screenshot:light",
-    "screenshot:dark": "node scripts/screenshot.js dark",
-    "screenshot:light": "node scripts/screenshot.js light",
+    "screenshot": "node scripts/screenshot.js",
     "changeset:add": "pnpx @changesets/cli",
     "changeset:version": "pnpx @changesets/cli version",
     "changeset:publish": "pnpx @changesets/cli publish"
@@ -46,11 +55,11 @@
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
-    "colorSchema": "both",
+    "colorSchema": "dark",
     "defaults": {
       "fonts": {
-        "sans": "Nunito Sans",
-        "mono": "Fira Code"
+        "sans": "IBM Plex Sans",
+        "mono": "IBM Plex Mono"
       }
     }
   },

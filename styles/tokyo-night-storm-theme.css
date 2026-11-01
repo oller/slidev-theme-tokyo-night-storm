@@ -1,0 +1,198 @@
+/* Tokyo Night Storm Theme for Slidev - Comprehensive Styling
+   Palette: Tokyo Night Storm by enkia (https://github.com/enkia/tokyo-night-vscode-theme)
+   with folke's tokyonight.nvim values (https://github.com/folke/tokyonight.nvim).
+   Dark only: there is no light mode. */
+
+:root {
+  /* Tokyo Night Storm palette */
+  --tn-bg: #24283b;
+  --tn-bg-dark: #1f2335;
+  --tn-bg-highlight: #292e42;
+  --tn-fg: #c0caf5;
+  --tn-fg-dark: #a9b1d6;
+  --tn-comment: #565f89;
+  --tn-terminal-black: #414868;
+
+  --tn-blue: #7aa2f7;
+  --tn-cyan: #7dcfff;
+  --tn-green: #9ece6a;
+  --tn-magenta: #bb9af7;
+  --tn-orange: #ff9e64;
+  --tn-purple: #9d7cd8;
+  --tn-red: #f7768e;
+  --tn-yellow: #e0af68;
+  --tn-teal: #1abc9c;
+
+  /* Semantic tokens */
+  --tn-surface: var(--tn-bg-dark); /* code blocks, inline code */
+  --tn-border: var(--tn-terminal-black);
+  --tn-primary: var(--tn-magenta);
+  --tn-primary-hover: var(--tn-blue);
+  --tn-accent: var(--tn-cyan); /* secondary neon accent */
+  --tn-on-accent: var(--tn-bg-dark); /* text drawn on a filled accent */
+}
+
+/* Overrides Slidev's default theme variables. The extra :root gives these rules
+higher specificity than Slidev's own html.dark block, so no !important is needed. */
+html.dark:root {
+  --slidev-bg: var(--tn-bg);
+  --slidev-slide-container-background: var(--tn-bg);
+  --slidev-bg-alt: var(--tn-bg-highlight);
+  --slidev-text: var(--tn-fg);
+  --slidev-text-light: var(--tn-fg-dark);
+  --slidev-text-lighter: var(--tn-fg-dark);
+  --slidev-primary: var(--tn-primary);
+  --slidev-theme-primary: var(--tn-primary);
+  --slidev-border: var(--tn-border);
+  --slidev-code-background: var(--tn-surface);
+  --slidev-code-foreground: var(--tn-fg);
+  --slidev-code-tab-divider: var(--tn-border);
+  --slidev-code-tab-text-color: var(--tn-fg-dark);
+  --slidev-code-tab-active-text-color: var(--tn-fg);
+}
+
+
+/* All element styles are scoped to .slidev-layout (slide content) so they
+don't leak into Slidev's own UI (nav controls, overview, presenter view). */
+
+/* Headings */
+.slidev-layout h1 {
+  color: var(--tn-magenta);
+}
+
+.slidev-layout h2 {
+  color: var(--tn-blue);
+}
+
+.slidev-layout h3 {
+  color: var(--tn-cyan);
+}
+
+.slidev-layout h4 {
+  color: var(--tn-green);
+}
+
+.slidev-layout h5 {
+  color: var(--tn-yellow);
+}
+
+.slidev-layout h6 {
+  color: var(--tn-orange);
+  /* Slidev dims h6 to 40% opacity; keep it readable */
+  opacity: 0.9;
+}
+
+/* Code */
+.slidev-layout code {
+  color: var(--tn-cyan);
+  background-color: var(--tn-surface);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.slidev-layout pre {
+  background-color: var(--tn-surface);
+  color: var(--tn-fg);
+  border-radius: 4px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* Links */
+.slidev-layout a {
+  color: var(--tn-blue);
+
+  &:hover {
+    color: var(--tn-magenta);
+  }
+}
+
+/* Tables */
+.slidev-layout table {
+  border-collapse: collapse;
+  border: 1px solid var(--slidev-border);
+}
+
+.slidev-layout thead {
+  background-color: var(--slidev-bg-alt);
+  border-bottom: 2px solid var(--slidev-border);
+}
+
+.slidev-layout th {
+  color: var(--tn-magenta);
+  font-weight: 600;
+  padding: 0.75em 1em;
+  border: 1px solid var(--slidev-border);
+}
+
+.slidev-layout td {
+  padding: 0.75em 1em;
+  border: 1px solid var(--slidev-border);
+}
+
+.slidev-layout tbody tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--tn-primary) 8%, transparent);
+}
+
+.slidev-layout tbody tr:hover {
+  background-color: var(--slidev-bg-alt);
+}
+
+/* Slidev Components */
+/* Slidev paints the slide on .slidev-slide-content (bg-main). Put the Tokyo Night
+background there, not on layout/page, so global-top/bottom aren't hidden.
+Extra specificity is needed to beat Slidev's scoped style. The print container
+is what export/PDF/PNG use. */
+html .slidev-slide-container,
+html .slidev-slide-container .slidev-slide-content.slidev-slide-content,
+html:root .print-slide-container.print-slide-container {
+  background-color: var(--slidev-bg);
+}
+
+.slidev-layout {
+  color: var(--slidev-text);
+}
+
+.slidev-page-number {
+  color: var(--slidev-text-lighter);
+}
+
+/* Button Styles */
+.slidev-layout button,
+.slidev-layout .slidev-button {
+  background-color: var(--slidev-primary);
+  color: var(--tn-on-accent);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.slidev-layout button:hover,
+.slidev-layout .slidev-button:hover {
+  background-color: var(--tn-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Highlighted Text */
+.slidev-layout mark,
+.slidev-layout .highlight {
+  background-color: color-mix(in srgb, var(--tn-yellow) 25%, transparent);
+  color: var(--tn-yellow);
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+}
+
+/* Bold & Italic */
+.slidev-layout strong,
+.slidev-layout b {
+  color: var(--tn-orange);
+}
+
+.slidev-layout em,
+.slidev-layout i {
+  color: var(--tn-teal);
+}

@@ -1,4 +1,4 @@
-/* Nord styling for Slidev's built-in layouts.
+/* Tokyo Night Storm styling for Slidev's built-in layouts.
 Like other established themes (e.g. seriph), we don't re-implement the layout
 components; Slidev provides the markup and we style the layout classes. */
 
@@ -42,7 +42,7 @@ components; Slidev provides the markup and we style the layout classes. */
   line-height: 1.15;
   margin-bottom: 0;
   padding-left: 0.4em;
-  border-left: 0.12em solid var(--frost1);
+  border-left: 0.12em solid var(--tn-primary);
 }
 
 .slidev-layout.section h1 + p {
@@ -85,7 +85,7 @@ components; Slidev provides the markup and we style the layout classes. */
 /* Quote: accent bar and quiet attribution */
 .slidev-layout.quote > div {
   padding-left: 1.5rem;
-  border-left: 0.2em solid var(--frost2);
+  border-left: 0.2em solid var(--tn-accent);
 }
 
 .slidev-layout.quote h1 {
