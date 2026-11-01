@@ -1,11 +1,10 @@
 /* Tokyo Night Storm Theme for Slidev - Comprehensive Styling
    Palette: Tokyo Night Storm by enkia (https://github.com/enkia/tokyo-night-vscode-theme)
    with folke's tokyonight.nvim values (https://github.com/folke/tokyonight.nvim).
-   Light mode uses Tokyo Night Day, with the accent hues darkened slightly so
-   text stays readable (>= ~4.5:1) on the light background. */
+   Dark only: there is no light mode. */
 
 :root {
-  /* Tokyo Night Storm palette (dark) */
+  /* Tokyo Night Storm palette */
   --tn-bg: #24283b;
   --tn-bg-dark: #1f2335;
   --tn-bg-highlight: #292e42;
@@ -24,8 +23,8 @@
   --tn-yellow: #e0af68;
   --tn-teal: #1abc9c;
 
-  /* Semantic tokens (re-mapped in light mode below) */
-  --tn-surface: var(--tn-bg-dark); /* code blocks, inline code, badges */
+  /* Semantic tokens */
+  --tn-surface: var(--tn-bg-dark); /* code blocks, inline code */
   --tn-border: var(--tn-terminal-black);
   --tn-primary: var(--tn-magenta);
   --tn-primary-hover: var(--tn-blue);
@@ -33,60 +32,12 @@
   --tn-on-accent: var(--tn-bg-dark); /* text drawn on a filled accent */
 }
 
-/* Light mode: Tokyo Night Day. Accent hues stay coherent with Storm
-   (blue / magenta / cyan) but are darkened for contrast on #e1e2e7. */
-html.light:root {
-  --tn-bg: #e1e2e7;
-  --tn-bg-dark: #d0d5e3;
-  --tn-bg-highlight: #c4c8da;
-  --tn-fg: #33559f;
-  --tn-fg-dark: #4a5a99;
-  --tn-comment: #6b73a0;
-  --tn-terminal-black: #a1a6c5;
-
-  --tn-blue: #2759b8;
-  --tn-cyan: #00678a;
-  --tn-green: #4a6a2d;
-  --tn-magenta: #7f35cc;
-  --tn-orange: #9a4f00;
-  --tn-purple: #7847bd;
-  --tn-red: #c4174a;
-  --tn-yellow: #7a5a2e;
-  --tn-teal: #0c705b;
-
-  --tn-surface: #eceef4;
-  --tn-border: #b4b9d1;
-  --tn-primary: var(--tn-magenta);
-  --tn-primary-hover: var(--tn-blue);
-  --tn-accent: var(--tn-cyan);
-  --tn-on-accent: #ffffff;
-}
-
 /* Overrides Slidev's default theme variables. The extra :root gives these rules
 higher specificity than Slidev's own html.dark block, so no !important is needed. */
-/* Dark Mode */
 html.dark:root {
   --slidev-bg: var(--tn-bg);
   --slidev-slide-container-background: var(--tn-bg);
   --slidev-bg-alt: var(--tn-bg-highlight);
-  --slidev-text: var(--tn-fg);
-  --slidev-text-light: var(--tn-fg-dark);
-  --slidev-text-lighter: var(--tn-fg-dark);
-  --slidev-primary: var(--tn-primary);
-  --slidev-theme-primary: var(--tn-primary);
-  --slidev-border: var(--tn-border);
-  --slidev-code-background: var(--tn-surface);
-  --slidev-code-foreground: var(--tn-fg);
-  --slidev-code-tab-divider: var(--tn-border);
-  --slidev-code-tab-text-color: var(--tn-fg-dark);
-  --slidev-code-tab-active-text-color: var(--tn-fg);
-}
-
-/* Light Mode */
-html.light:root {
-  --slidev-bg: var(--tn-bg);
-  --slidev-slide-container-background: var(--tn-bg);
-  --slidev-bg-alt: var(--tn-surface);
   --slidev-text: var(--tn-fg);
   --slidev-text-light: var(--tn-fg-dark);
   --slidev-text-lighter: var(--tn-fg-dark);
@@ -127,7 +78,7 @@ don't leak into Slidev's own UI (nav controls, overview, presenter view). */
 
 .slidev-layout h6 {
   color: var(--tn-orange);
-  /* Slidev dims h6 to 40% opacity, which is unreadable on the light background */
+  /* Slidev dims h6 to 40% opacity; keep it readable */
   opacity: 0.9;
 }
 
@@ -146,10 +97,6 @@ don't leak into Slidev's own UI (nav controls, overview, presenter view). */
   border-radius: 4px;
   overflow-x: auto;
   overflow-y: auto;
-}
-
-.light .slidev-layout pre {
-  border: 1px solid var(--tn-border);
 }
 
 /* Links */

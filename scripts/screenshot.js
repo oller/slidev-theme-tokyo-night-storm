@@ -9,61 +9,45 @@ const rootDir = path.resolve(__dirname, '..')
 const cliPath = path.resolve(rootDir, 'node_modules/@slidev/cli/bin/slidev.mjs')
 const outputDir = path.resolve(rootDir, 'example-export')
 
-function exportMode(mode) {
-  const isDark = mode === 'dark'
-  const suffix = isDark ? '' : '-light'
-  console.log(`Generating ${mode} mode screenshots...`)
+console.log('Generating screenshots...')
 
-  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), `slidev-export-${mode}-`))
-  try {
-    const args = [
-      cliPath,
-      'export',
-      'example.md',
-      '--format',
-      'png',
-      '--output',
-      tmpDir
-    ]
-    if (isDark) {
-      args.push('--dark')
-    }
-    // Optional: use a system browser instead of Playwright's bundled Chromium,
-    // e.g. CHROMIUM_PATH=/usr/bin/google-chrome pnpm run screenshot
-    if (process.env.CHROMIUM_PATH) {
-      args.push('--executable-path', process.env.CHROMIUM_PATH)
-    }
-
-    execFileSync(process.execPath, args, {
-      cwd: rootDir,
-      stdio: 'inherit'
-    })
-
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true })
-    }
-
-    const files = fs.readdirSync(tmpDir).filter(f => f.endsWith('.png'))
-    for (const file of files) {
-      const num = path.parse(file).name
-      const dest = path.join(outputDir, `${num}${suffix}.png`)
-      fs.copyFileSync(path.join(tmpDir, file), dest)
-    }
-    console.log(`✓ Copied ${files.length} ${mode} screenshots to ${outputDir}`)
-  } finally {
-    fs.rmSync(tmpDir, { recursive: true, force: true })
+const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'slidev-export-'))
+try {
+  const args = [
+    cliPath,
+    'export',
+    'example.md',
+    '--format',
+    'png',
+    '--dark',
+    '--output',
+    tmpDir
+  ]
+  // Optional: use a system browser instead of Playwright's bundled Chromium,
+  // e.g. CHROMIUM_PATH=/usr/bin/google-chrome pnpm run screenshot
+  if (process.env.CHROMIUM_PATH) {
+    args.push('--executable-path', process.env.CHROMIUM_PATH)
   }
-}
 
-const target = process.argv[2] || 'all'
-if (target === 'dark') {
-  exportMode('dark')
-} else if (target === 'light') {
-  exportMode('light')
-} else if (target === 'all') {
-  exportMode('dark')
-  exportMode('light')
-} else {
-  console.error(`Unknown target: ${target}. Use 'dark', 'light', or 'all'.`)
-  process.exit(1)
+  execFileSync(process.execPath, args, {
+    cwd: rootDir,
+    stdio: 'inherit'
+  })
+
+  fs.mkdirSync(outputDir, { recursive: true })
+
+  // Drop stale screenshots so removed slides don't linger
+  for (const file of fs.readdirSync(outputDir)) {
+    if (file.endsWith('.png')) {
+      fs.rmSync(path.join(outputDir, file))
+    }
+  }
+
+  const files = fs.readdirSync(tmpDir).filter(f => f.endsWith('.png'))
+  for (const file of files) {
+    fs.copyFileSync(path.join(tmpDir, file), path.join(outputDir, file))
+  }
+  console.log(`✓ Copied ${files.length} screenshots to ${outputDir}`)
+} finally {
+  fs.rmSync(tmpDir, { recursive: true, force: true })
 }

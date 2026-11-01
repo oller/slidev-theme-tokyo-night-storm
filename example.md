@@ -92,31 +92,6 @@ class: "text-center"
 lorem ipsum dolor sit _amet_
 
 ---
-
-# Components 
-<br>
-
-### TokyoNightBadge
-
-<br>
-<div class="flex items-center gap-4">
-  <TokyoNightBadge variant="primary">Primary</TokyoNightBadge>
-  <TokyoNightBadge variant="success">Success</TokyoNightBadge>
-  <TokyoNightBadge variant="warning">Beta</TokyoNightBadge>
-  <TokyoNightBadge variant="danger">Deprecated</TokyoNightBadge>
-</div>
-
-<br />
-
-```html
-<!-- Example usage in a slide -->
-<TokyoNightBadge variant="primary">New</TokyoNightBadge>
-```
-
-
-
-
----
 layout: section
 ---
 

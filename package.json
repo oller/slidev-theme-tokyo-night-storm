@@ -1,7 +1,7 @@
 {
   "name": "slidev-theme-tokyo-night-storm",
   "version": "0.0.0",
-  "description": "A Tokyo Night Storm inspired theme for Slidev with dark (Storm) and light (Day) modes",
+  "description": "A Tokyo Night Storm inspired theme for Slidev (dark only)",
   "packageManager": "pnpm@10.34.6",
   "type": "module",
   "keywords": [
@@ -12,8 +12,7 @@
     "theme",
     "presentation",
     "slides",
-    "dark-theme",
-    "light-theme"
+    "dark-theme"
   ],
   "author": {
     "name": "David Ollerhead",
@@ -41,9 +40,7 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "pnpm run screenshot:dark && pnpm run screenshot:light",
-    "screenshot:dark": "node scripts/screenshot.js dark",
-    "screenshot:light": "node scripts/screenshot.js light",
+    "screenshot": "node scripts/screenshot.js",
     "changeset:add": "pnpx @changesets/cli",
     "changeset:version": "pnpx @changesets/cli version",
     "changeset:publish": "pnpx @changesets/cli publish"
@@ -58,7 +55,7 @@
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
   "slidev": {
-    "colorSchema": "both",
+    "colorSchema": "dark",
     "defaults": {
       "fonts": {
         "sans": "Inter",
