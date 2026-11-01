@@ -4,21 +4,9 @@ layout: cover
 class: text-center
 ---
 
-<!-- Hero photo: a relative <img> is bundled by Vite (frontmatter `background`/`image` paths are not). -->
-<img src="./assets/tokyo-night-neon.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
-<div class="absolute inset-0" style="background: color-mix(in srgb, var(--slidev-bg) 68%, transparent)" />
-
-<div class="relative z-10">
-
 # Tokyo Night Storm
 
 A [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) inspired theme for [Slidev](https://sli.dev/)
-
-</div>
-
-<div class="abs-br m-6 text-sm relative z-10">
-Photo by <a href="https://unsplash.com/photos/9gtODWv-L5I">Marek Okon</a> on Unsplash
-</div>
 
 ---
 
@@ -138,18 +126,13 @@ layout: two-cols
 - Midnight
 
 ---
-layout: default
+layout: image-right
+image: https://images.unsplash.com/photo-1604315523775-74cee3df116c?q=80&w=1920&auto=format&fit=crop
 ---
 
 # Images
 
-Slidev's `image-right` and `image-left` layouts work out of the box.
-
-<div class="grid grid-cols-2 gap-8 items-center">
+Slidev's `image-right` and `image-left` layouts work out of the box, filling the full slide height.
 
 - Neon-soaked city streets are a natural fit for Tokyo Night's palette
-- Photo by [Marek Okon](https://unsplash.com/photos/9gtODWv-L5I) on Unsplash
-
-<img src="./assets/tokyo-night-neon.jpg" alt="Neon rain in Shinjuku" class="rounded-lg shadow-xl" />
-
-</div>
+- Photo on [Unsplash](https://images.unsplash.com/photo-1604315523775-74cee3df116c?q=80&w=3850&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D)

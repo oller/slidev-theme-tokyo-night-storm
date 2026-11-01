@@ -70,7 +70,7 @@ This theme uses Slidev's built-in layouts and styles them with the Tokyo Night p
 
 Other built-in layouts (`two-cols`, `image-right`, `center`, ...) work as normal. See `example.md` for usage.
 
-> **Local images:** Slidev only bundles relative image paths used in markdown or `<img>` tags. For layout frontmatter such as `image:` or `background:`, use a URL or put the file in your project's `public/` folder. `example.md` uses an `<img>` over a theme-coloured overlay for its cover.
+> **Local images:** Slidev only bundles relative image paths used in markdown or `<img>` tags. For layout frontmatter such as `image:` or `background:`, use a URL or put the file in your project's `public/` folder.
 
 ![Section](https://raw.githubusercontent.com/oller/slidev-theme-tokyo-night-storm/main/example-export/6.png)
 ![Fact](https://raw.githubusercontent.com/oller/slidev-theme-tokyo-night-storm/main/example-export/7.png)
@@ -82,7 +82,7 @@ Other built-in layouts (`two-cols`, `image-right`, `center`, ...) work as normal
 ## Credits
 
 - Palette: [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) by enkia and [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) by folke
-- Cover photo (`assets/tokyo-night-neon.jpg`): [Marek Okon](https://unsplash.com/photos/9gtODWv-L5I) on [Unsplash](https://unsplash.com/) (Shinjuku neon rain), used under the [Unsplash License](https://unsplash.com/license). The image is used by `example.md` only and is not shipped in the npm package.
+- Demo photo (images slide): [Unsplash](https://images.unsplash.com/photo-1604315523775-74cee3df116c?q=80&w=1920&auto=format&fit=crop) (Tokyo neon street at night; photographer not identified), used under the [Unsplash License](https://unsplash.com/license). `example.md` hotlinks it via the `image-right` layout's `image:` URL; the local copy in `assets/tokyo-night-neon.jpg` is not used by the example and is not shipped in the npm package. The cover slide has no photo.
 
 ## Contributing
 
