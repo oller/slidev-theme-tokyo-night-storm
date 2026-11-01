@@ -28,6 +28,11 @@ function exportMode(mode) {
     if (isDark) {
       args.push('--dark')
     }
+    // Optional: use a system browser instead of Playwright's bundled Chromium,
+    // e.g. CHROMIUM_PATH=/usr/bin/google-chrome pnpm run screenshot
+    if (process.env.CHROMIUM_PATH) {
+      args.push('--executable-path', process.env.CHROMIUM_PATH)
+    }
 
     execFileSync(process.execPath, args, {
       cwd: rootDir,

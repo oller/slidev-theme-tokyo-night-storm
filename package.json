@@ -1,15 +1,27 @@
 {
   "name": "slidev-theme-tokyo-night-storm",
   "version": "0.0.0",
+  "description": "A Tokyo Night Storm inspired theme for Slidev with dark (Storm) and light (Day) modes",
   "packageManager": "pnpm@10.34.6",
   "type": "module",
   "keywords": [
     "slidev-theme",
-    "slidev"
+    "slidev",
+    "tokyo-night",
+    "tokyo-night-storm",
+    "theme",
+    "presentation",
+    "slides",
+    "dark-theme",
+    "light-theme"
   ],
   "author": {
     "name": "David Ollerhead",
     "url": "https://davidollerhead.com"
+  },
+  "homepage": "https://github.com/oller/slidev-theme-tokyo-night-storm#readme",
+  "bugs": {
+    "url": "https://github.com/oller/slidev-theme-tokyo-night-storm/issues"
   },
   "repository": {
     "type": "git",
@@ -49,7 +61,7 @@
     "colorSchema": "both",
     "defaults": {
       "fonts": {
-        "sans": "Nunito Sans",
+        "sans": "Inter",
         "mono": "Fira Code"
       }
     }
