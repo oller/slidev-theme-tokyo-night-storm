@@ -97,9 +97,3 @@ components; Slidev provides the markup and we style the layout classes. */
   margin-top: 0.5rem;
   color: var(--slidev-text-lighter);
 }
-
-/* Neon glow for the cover title */
-.slidev-layout.cover h1,
-.slidev-layout.intro h1 {
-  text-shadow: 0 0 0.4em color-mix(in srgb, var(--tn-primary) 55%, transparent);
-}

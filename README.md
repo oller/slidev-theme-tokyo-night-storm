@@ -53,16 +53,16 @@ Code blocks use the Shiki `tokyo-night` theme.
 
 Defaults (declared in `package.json` under `slidev.defaults.fonts`, loaded by Slidev from Google Fonts by family name):
 
-- Sans: [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
-- Mono: [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- Sans (body and UI): [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)
+- Mono (code only): [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 
-Override them in your own headmatter if you prefer, e.g. `fonts: { sans: 'IBM Plex Sans', mono: 'IBM Plex Mono' }`.
+Override them in your own headmatter if you prefer, e.g. `fonts: { sans: 'Your Sans', mono: 'Your Mono' }`.
 
 ## Layouts
 
 This theme uses Slidev's built-in layouts and styles them with the Tokyo Night palette (the same approach as `seriph` and `apple-basic`):
 
-- `cover` / `intro` : centred title slide
+- `cover` / `intro` : plain centred title slide (no background image or glow)
 - `section` : large title with a neon magenta accent bar
 - `fact` : one big number or phrase with a caption
 - `statement` : one bold sentence

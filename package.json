@@ -58,7 +58,7 @@
     "colorSchema": "dark",
     "defaults": {
       "fonts": {
-        "sans": "IBM Plex Mono",
+        "sans": "IBM Plex Sans",
         "mono": "IBM Plex Mono"
       }
     }
