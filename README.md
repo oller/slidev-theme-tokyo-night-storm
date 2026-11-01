@@ -51,10 +51,10 @@ Code blocks use the Shiki `tokyo-night` theme.
 
 ## Fonts
 
-Defaults (declared in `package.json` under `slidev.defaults.fonts`, loaded by Slidev from Google Fonts):
+Defaults (declared in `package.json` under `slidev.defaults.fonts`, loaded by Slidev from Google Fonts by family name):
 
-- Sans: [Inter](https://rsms.me/inter/), a clean, neutral UI face that lets the neon palette carry the style
-- Mono: [Fira Code](https://github.com/tonsky/FiraCode), with programming ligatures for code
+- Sans: [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- Mono: [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 
 Override them in your own headmatter if you prefer, e.g. `fonts: { sans: 'IBM Plex Sans', mono: 'IBM Plex Mono' }`.
 

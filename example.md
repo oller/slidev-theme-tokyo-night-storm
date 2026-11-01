@@ -6,8 +6,6 @@ class: text-center
 
 # Tokyo Night Storm
 
-A [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) inspired theme for [Slidev](https://sli.dev/)
-
 ---
 
 # What is Slidev?

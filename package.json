@@ -58,8 +58,8 @@
     "colorSchema": "dark",
     "defaults": {
       "fonts": {
-        "sans": "Inter",
-        "mono": "Fira Code"
+        "sans": "IBM Plex Mono",
+        "mono": "IBM Plex Mono"
       }
     }
   },
