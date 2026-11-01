@@ -1,11 +1,24 @@
 ---
 theme: ./
-layout: center
+layout: cover
 class: text-center
 ---
-# Nord Theme 
 
-A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://sli.dev/)
+<!-- Hero photo: a relative <img> is bundled by Vite (frontmatter `background`/`image` paths are not). -->
+<img src="./assets/tokyo-night-neon.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+<div class="absolute inset-0" style="background: color-mix(in srgb, var(--slidev-bg) 68%, transparent)" />
+
+<div class="relative z-10">
+
+# Tokyo Night Storm
+
+A [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) inspired theme for [Slidev](https://sli.dev/)
+
+</div>
+
+<div class="abs-br m-6 text-sm relative z-10">
+Photo by <a href="https://unsplash.com/photos/9gtODWv-L5I">Marek Okon</a> on Unsplash
+</div>
 
 ---
 
@@ -83,21 +96,21 @@ lorem ipsum dolor sit _amet_
 # Components 
 <br>
 
-### NordBadge
+### TokyoNightBadge
 
 <br>
 <div class="flex items-center gap-4">
-  <NordBadge variant="primary">Primary</NordBadge>
-  <NordBadge variant="success">Success</NordBadge>
-  <NordBadge variant="warning">Beta</NordBadge>
-  <NordBadge variant="danger">Deprecated</NordBadge>
+  <TokyoNightBadge variant="primary">Primary</TokyoNightBadge>
+  <TokyoNightBadge variant="success">Success</TokyoNightBadge>
+  <TokyoNightBadge variant="warning">Beta</TokyoNightBadge>
+  <TokyoNightBadge variant="danger">Deprecated</TokyoNightBadge>
 </div>
 
 <br />
 
 ```html
 <!-- Example usage in a slide -->
-<NordBadge variant="primary">New</NordBadge>
+<TokyoNightBadge variant="primary">New</TokyoNightBadge>
 ```
 
 
@@ -129,9 +142,9 @@ layout: statement
 layout: quote
 ---
 
-# "Polar night, snow storm, frost and aurora."
+# "Neon rain on the streets of Shinjuku."
 
-Arctic Ice Studio
+Tokyo Night Storm
 
 ---
 layout: two-cols
@@ -139,24 +152,29 @@ layout: two-cols
 
 # Left
 
-- Frost
-- Snow
+- Storm
+- Neon
 
 ::right::
 
 # Right
 
-- Aurora
-- Polar night
+- Rain
+- Midnight
 
 ---
-layout: image-right
-image: https://images.unsplash.com/photo-1488415032361-b7e238421f1b?auto=format&fit=crop&w=1920&q=80
+layout: default
 ---
 
 # Images
 
 Slidev's `image-right` and `image-left` layouts work out of the box.
 
-- Aurora over snow-covered mountains is a natural fit for Nord's arctic palette
-- Photo from Unsplash
+<div class="grid grid-cols-2 gap-8 items-center">
+
+- Neon-soaked city streets are a natural fit for Tokyo Night's palette
+- Photo by [Marek Okon](https://unsplash.com/photos/9gtODWv-L5I) on Unsplash
+
+<img src="./assets/tokyo-night-neon.jpg" alt="Neon rain in Shinjuku" class="rounded-lg shadow-xl" />
+
+</div>
