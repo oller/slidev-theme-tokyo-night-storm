@@ -1,0 +1,58 @@
+{
+  "name": "slidev-theme-tokyo-night-storm",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.34.6",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "author": {
+    "name": "David Ollerhead",
+    "url": "https://davidollerhead.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oller/slidev-theme-tokyo-night-storm"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "components",
+    "setup",
+    "styles",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "slidev build example.md",
+    "dev": "slidev example.md --open",
+    "export": "slidev export example.md",
+    "screenshot": "pnpm run screenshot:dark && pnpm run screenshot:light",
+    "screenshot:dark": "node scripts/screenshot.js dark",
+    "screenshot:light": "node scripts/screenshot.js light",
+    "changeset:add": "pnpx @changesets/cli",
+    "changeset:version": "pnpx @changesets/cli version",
+    "changeset:publish": "pnpx @changesets/cli publish"
+  },
+  "dependencies": {
+    "@slidev/types": "^52.10.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.1",
+    "@slidev/cli": "^52.10.1",
+    "playwright-chromium": "^1.57.0"
+  },
+  "//": "Learn more: https://sli.dev/guide/write-theme.html",
+  "slidev": {
+    "colorSchema": "both",
+    "defaults": {
+      "fonts": {
+        "sans": "Nunito Sans",
+        "mono": "Fira Code"
+      }
+    }
+  },
+  "license": "MIT"
+}
